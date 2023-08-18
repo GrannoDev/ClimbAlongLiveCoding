@@ -1,0 +1,14 @@
+<section>
+  <h1 class="py-4 text-center text-3xl font-bold">Competitions</h1>
+  <div class="flex flex-col gap-1">
+    <ng-container
+      *ngIf="competitions | async as competitions; else noCompetitions">
+      <ca-competition-list-item
+        *ngFor="let comp of competitions"
+        [competition]="comp" />
+    </ng-container>
+    <ng-template #noCompetitions>
+      <p>No Competitions Found</p>
+    </ng-template>
+  </div>
+</section>

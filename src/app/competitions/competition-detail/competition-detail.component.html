@@ -1,0 +1,16 @@
+<ng-container *ngIf="competition | async as competition">
+  <div class="rounded-lg border bg-white p-4 shadow-md">
+    <h2 class="text-xl font-semibold">{{ competition.title }}</h2>
+    <p class="mt-2">
+      {{ competition.startTime | date: 'MMM d, y, h:mm, a' }} -
+      {{ competition.endTime | date: 'MMM d, y, h:mm, a' }}
+    </p>
+    <p class="text-gray-600">{{ competition.address }}</p>
+    <div class="mt-4 flex justify-end">
+      <button
+        class="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+        Register
+      </button>
+    </div>
+  </div>
+</ng-container>

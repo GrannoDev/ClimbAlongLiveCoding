@@ -1,0 +1,14 @@
+<a
+  [routerLink]="['/competitions', competition.competitionId]"
+  *ngIf="competition; else noCompetition"
+  class="block h-full w-full rounded border border-sky-100 p-4 shadow transition duration-300 ease-linear hover:scale-x-105">
+  <p class="pb-1 font-medium">{{ competition.title | titlecase }}</p>
+  <span>
+    {{ competition.startTime | date: 'short' }} -
+    {{ competition.endTime | date: 'short' }}</span
+  >
+</a>
+
+<ng-template #noCompetition>
+  <p>Competition not found...</p>
+</ng-template>

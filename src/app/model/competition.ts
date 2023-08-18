@@ -1,0 +1,30 @@
+export interface Competition {
+  competitionId: number;
+  title: string;
+  description: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  urlFriendlyAbbreviation: string | null;
+  columnsInAthleteLists: number | null;
+  climbAlongLocationId: number;
+  listed: boolean;
+  athleteRegistrationSubject: string;
+  athleteRegistrationMessage: string;
+  officialRegistrationSubject: string;
+  officialRegistrationMessage: string;
+  address: string | null;
+  facility: string | null;
+  city: string | null;
+  countries: string[] | null;
+  imageName: string | null;
+  eventLink: string | null;
+  showRegisterButton: boolean;
+  signUpOpen: boolean;
+  participantLimit: number;
+  thumbnail: string | null;
+  autoCheckIn: boolean | null;
+  organizationId: number | null;
+  price: number | null;
+  paymentEnabled: boolean | null;
+  connectedAccountId: string | null;
+}
