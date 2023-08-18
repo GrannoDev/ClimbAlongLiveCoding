@@ -5,5 +5,4 @@ export interface State {
   wantedCompetitionId: number | undefined;
   selectedCompetition: Competition | undefined;
   apiUrl?: string;
-  storageUrl?: string;
 }
